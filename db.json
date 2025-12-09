@@ -1,0 +1,33 @@
+{
+  "activities": [],
+  "goals": {
+    "id": 1,
+    "dailySteps": 10000,
+    "dailyCalories": 2000,
+    "weeklyWorkouts": 5,
+    "dailyWorkoutDuration": 60
+  },
+  "memberships": [],
+  "payments": [],
+  "users": [
+    {
+      "id": 1,
+      "email": "john@example.com",
+      "password": "pass001",
+      "name": "John Doe"
+    },
+    {
+      "id": 2,
+      "email": "jane@example.com",
+      "password": "pass002",
+      "name": "Jane Smith"
+    },
+    {
+      "id": 3,
+      "email": "mike@example.com",
+      "password": "pass003",
+      "name": "Mike Johnson"
+    }
+  ]
+}
+

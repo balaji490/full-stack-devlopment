@@ -1,0 +1,99 @@
+/* App styles */
+.App {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Premium gradient background for the entire app */
+.app-gradient {
+  background: linear-gradient(180deg, rgba(8,10,20,1) 0%, rgba(15,23,42,1) 40%, rgba(17,24,39,1) 100%);
+  color: #e6eef6;
+}
+
+/* Navbar gradient */
+.navbar-gradient {
+  background: linear-gradient(90deg, rgba(9,10,24,0.9), rgba(8,20,36,0.9));
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+
+/* Logo fade-in */
+.logo-fade {
+  animation: fadeIn 1s ease-in-out;
+  filter: drop-shadow(0 6px 16px rgba(0,0,0,0.5));
+}
+
+/* Facilities background helper - place images into /public/facility1.jpg etc */
+.facilities-hero {
+  /* background-image is set inline in the component to ensure CRA serves files from /public without CSS-loader resolving */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.facilities-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(2,6,23,0.6), rgba(2,6,23,0.75));
+  opacity: 0.85;
+}
+
+.facilities-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Button hover effects */
+button {
+  transition: all 0.2s ease-in-out;
+}
+
+button:active {
+  transform: scale(0.98);
+}
